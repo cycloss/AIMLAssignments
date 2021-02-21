@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from mathFuncs import computePDF
 
+# TODO add y lim, axes labling and legend
+
 
 class PDFGrapher:
     @staticmethod
