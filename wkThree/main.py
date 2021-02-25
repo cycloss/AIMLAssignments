@@ -50,7 +50,7 @@ def calculateHeightProbs(grouped: dict, height: float) -> dict:
             f'{className:11} mean = {mean:<7.2f} variance = {variance:<7.2f} P(154) = {probForHeight:.5f}'
         )
         retDict[className] = probForHeight
-    # PDFGrapher.showPlot()
+    PDFGrapher.showPlot()
     return retDict
 
 
@@ -109,13 +109,10 @@ def calculateRelativeProbs(combinedProbs: dict, alpha: float) -> dict:
 
 
 groupProbabilities = calculateGroupProbs(data)
-print(groupProbabilities)
 heightProbs = calculateHeightProbs(grouped, 154)
-print(heightProbs)
 glassesProbs = calculateGlassesProbs(grouped, True)
-print(glassesProbs)
 musicProbs = calculateMusicProbs(grouped, 'Pop')
-print(musicProbs)
+
 combinedProbs, alpha = calculateCombinedProbabilities(groupProbabilities,
                                                       heightProbs,
                                                       glassesProbs, musicProbs)
@@ -128,4 +125,6 @@ print(sum([prob * alpha for k_, prob in combinedProbs.items()]))
 # apply bayes to the calculated probabilities of each class and pick the most likely
 
 relativeProbs = calculateRelativeProbs(combinedProbs, alpha)
-print(relativeProbs)
+
+for k, v in relativeProbs.items():
+    print(f'{k:11}: {v:.5f}')
