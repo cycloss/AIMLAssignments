@@ -1,0 +1,11 @@
+Gender,Smoke,Home City,Life Stage,BMI Category,Activeness,Illness
+male,yes,london,elderly,overweight,low,yes
+male,no,london,child,normal,medium,yes
+male,no,bristol,adult,overweight,medium,no
+male,yes,birmingham,elderly,underweight,medium,yes
+female,yes,birmingham,adult,overweight,low,yes
+female,no,london,elderly,normal,high,no
+male,yes,london,adult,underweight,high,no
+female,no,bristol,child,normal,medium,yes
+female,no,birmingham,adult,normal,low,no
+female,no,edinburgh,elderly,normal,high,no
